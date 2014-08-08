@@ -7,16 +7,12 @@ class TodosController < ApplicationController
     @todo = Todo.find params[:id]
   end
 
-def create
-    @todo = Todo.new(todo_params)
-    
-    if @todo.save
-    redirect_to @todo, notice: 'Your new TODO was saved'
-    else
-    redirect_to @todo, notice: 'Your new TODO was NOT saved.  Please add a Description.'
-  end
-end
 
+  def create
+    @todo = Todo.new(todo_params)
+    @todo.save
+    redirect_to @todo, notice: 'Your new TODO was saved'
+  end
 
   private
 
