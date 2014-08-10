@@ -10,9 +10,14 @@ class TodosController < ApplicationController
 
   def create
     @todo = Todo.new(todo_params)
-    @todo.save
-    redirect_to @todo, notice: 'Your new TODO was saved'
-  end
+    
+    if @todo.save
+      redirect_to @todo, notice: 'Your new TODO was saved'
+    else
+      redirect_to new_todo_path, notice: 'Your new TODO was NOT saved.  Please add a Description.'
+    end
+end
+
 
   private
 
