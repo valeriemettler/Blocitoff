@@ -1,5 +1,6 @@
 Blocitoff::Application.routes.draw do
 
+  devise_for :users
   root "application#hello"
 
   resources :todos, only: [:show, :new, :create]
