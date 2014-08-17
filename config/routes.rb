@@ -1,9 +1,17 @@
 Blocitoff::Application.routes.draw do
 
+  get "welcome/index"
+  get "welcome/about"
   devise_for :users
-  root "application#hello"
+  #root "application#hello"
 
   resources :todos, only: [:show, :new, :create]
+
+  get 'about' => 'welcome#about'
+
+  root to: 'welcome#index'
+
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

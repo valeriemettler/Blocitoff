@@ -27,6 +27,8 @@ GEM
       tzinfo (~> 0.3.37)
     arel (4.0.2)
     bcrypt (3.1.7)
+    bootstrap-sass (3.1.1.1)
+      sass (~> 3.2)
     builder (3.1.4)
     capybara (2.4.1)
       mime-types (>= 1.16)
@@ -50,6 +52,9 @@ GEM
     diff-lcs (1.2.5)
     erubis (2.7.0)
     execjs (2.2.1)
+    figaro (0.7.0)
+      bundler (~> 1.0)
+      rails (>= 3, < 5)
     hike (1.2.3)
     i18n (0.6.11)
     jbuilder (1.5.3)
@@ -151,9 +156,11 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bootstrap-sass (~> 3.1.1)
   capybara
   coffee-rails (~> 4.0.0)
   devise
+  figaro
   jbuilder (~> 1.2)
   jquery-rails
   pg

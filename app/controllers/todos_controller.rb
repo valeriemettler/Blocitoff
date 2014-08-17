@@ -1,5 +1,9 @@
 class TodosController < ApplicationController 
   
+  def index
+  end
+  
+
   def new
   end
 
@@ -12,9 +16,9 @@ class TodosController < ApplicationController
     @todo = Todo.new(todo_params)
     
     if @todo.save
-      redirect_to @todo, notice: 'Your new TODO was saved'
+      redirect_to @todo, notice: 'Woot! A new TODO!'
     else
-      redirect_to new_todo_path, notice: 'Your new TODO was NOT saved.  Please add a Description.'
+      redirect_to new_todo_path, notice: 'Oops! Did you forget to type something in the box?'
     end
 end
 
