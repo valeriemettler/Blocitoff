@@ -1,2 +1,8 @@
-<p><b><%= @todo.description %></b></p>
+<h1><%= @todo.description %></h1>
 
+
+</div>
+  <div class="col-md-4">
+    <%= link_to "Delete", @todo, method: :delete, remote: true %>
+  </div>
+</div>

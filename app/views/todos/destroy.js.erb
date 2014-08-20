@@ -1,0 +1,5 @@
+<% if @todo.destroyed? %>
+   $('#todo_' +<%= @todo.id %>).hide();
+<% else %>
+   $('#todo_' +<%= @todo.id %>).prepend("<div class='alert alert-error'><%= flash[:error] %></div>");
+<% end %>
