@@ -1,0 +1,12 @@
+ <% if @todo.valid? %>
+   $('.js-todos').prepend("<%= escape_javascript(render(@todo)) %>");
+   $('.new-todo').html("<%= escape_javascript(render partial: 'todos/form') %>");
+   $('.alert').html("<button type='button' class='close' data-dismiss='alert'>&times;</button><%= flash[:notice] %>");
+   $('.alert').addClass('alert-success');
+   $('.alert').removeClass('remove');
+ <% else %>
+   $('.alert').html("<button type='button' class='close' data-dismiss='alert'>&times;</button><%= flash[:error] %>");
+   $('.alert').addClass('alert-danger');
+   $('.alert').removeClass('remove');
+   $('.new-todo').html("<%= escape_javascript(render partial: 'todos/form') %>")
+ <% end %>

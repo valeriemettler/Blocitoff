@@ -9,11 +9,15 @@ class TodosController < ApplicationController
   def create
     @todo = Todo.new(todo_params)
     @todo.user = current_user
-    
+
     if @todo.save
-      redirect_to todos_path, notice: 'Woot! A new TODO!'
+      flash[:notice] = 'Woot! A new TODO!'
     else
-      redirect_to todos_path, error: 'Oops! Did you forget to type something in the box?'
+      flash[:error] = 'Oops! Did you forget to type something in the box?'
+    end
+
+    respond_with(@todo) do |format|
+      format.html {redirect_to todos_path}
     end
   end
 
@@ -26,7 +30,7 @@ class TodosController < ApplicationController
       flash[:error] = "Oops! Try deleting again."
     end
     respond_with(@todo) do |format|
-      format.html { redirect_to [@todo] }
+      format.html { redirect_to todos_path }
     end
 end
 

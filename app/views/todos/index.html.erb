@@ -1,8 +1,11 @@
+<div class="alert remove">  
+</div>
+
 <h1>My Todos</h1>
-<%= form_for Todo.new do |form| %>
-  <%= form.text_field :description, placeholder: 'Description' %>
-  <%= form.submit 'Save' %>
-<% end %>
+
+<div class='new-todo'>
+  <%= render partial: 'form' %>
+</div>
 
 <table class="table">
   <thead>
@@ -10,11 +13,7 @@
     <th>Days Left</th>
     <th>Complete</th>
   </thead>
-  <% @todos.each do |todo| %>
-    <tr id="<%= dom_id(todo)%>">
-      <td><%= todo.description %></td>
-      <td></td>
-      <td><%= link_to "Completed", todo, method: :delete, remote: true, class: "btn btn-success" %></td>
-    </tr>
-  <% end %>
+  <tbody class="js-todos">
+    <%= render @todos %> 
+  </tbody> 
 </table>
