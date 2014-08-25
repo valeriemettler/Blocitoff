@@ -1,5 +1,10 @@
 <% if @todo.destroyed? %>
    $('#todo_' +<%= @todo.id %>).hide();
+   $('.alert').html("<button type='button' class='close' data-dismiss='alert'>&times;</button><%= flash[:notice] %>");
+   $('.alert').addClass('alert-success');
+   $('.alert').removeClass('remove');
 <% else %>
-   $('#todo_' +<%= @todo.id %>).prepend("<div class='alert alert-error'><%= flash[:error] %></div>");
+   $('.alert').html("<button type='button' class='close' data-dismiss='alert'>&times;</button><%= flash[:error] %>");
+   $('.alert').addClass('alert-danger');
+   $('.alert').removeClass('remove');
 <% end %>
