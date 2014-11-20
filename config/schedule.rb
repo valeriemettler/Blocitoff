@@ -1,3 +1,4 @@
+
 # Use this file to easily define all of your cron jobs
 # http://en.wikipedia.org/wiki/Cron
 
@@ -13,7 +14,9 @@
 #   runner "AnotherModel.prune_old_records"
 # end
 
-every 1.day do
+set :output, "#{path}/log/cron.log"
+
+every 1.minute do
   rake "delete_items"
 end
 

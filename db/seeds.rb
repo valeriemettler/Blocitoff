@@ -19,8 +19,6 @@ users = User.all
  end
  todos = Todo.all
 
-
-
  # Create a member
  member = User.new(
    name:     'Member User',
@@ -29,8 +27,6 @@ users = User.all
  )
  member.skip_confirmation!
  member.save
-
-
 
 puts "Seed finished"
 puts "#{User.count} users created"

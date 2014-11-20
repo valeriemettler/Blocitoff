@@ -1,5 +1,6 @@
- <tr id="<%= dom_id(todo)%>">
-    <td><%= todo.description %></td>
-    <td><%= distance_of_time_in_words_to_now(todo.created_at + 7.days) %></td>
-    <td><%= link_to "Completed", todo, method: :delete, remote: true, class: "btn btn-success" %></td>
-  </tr>
+<tr id="<%= dom_id(todo)%>">
+  <td><%= todo.description %></td>
+  <td><%= distance_of_time_in_words_to_now(todo.created_at + 1.minute) %></td>
+  <td><%= link_to "Completed", todo, method: :delete, remote: true, class: "btn btn-success" %></td>
+</tr>
+

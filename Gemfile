@@ -48,6 +48,7 @@ end
 gem 'devise'
 gem 'figaro'
 gem 'whenever', :require => false
+gem 'capistrano', '~> 3.2.0'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
