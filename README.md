@@ -2,13 +2,15 @@
 
 ## valblocitoff:  a self-destructing to-do list app
 
-https://github.com/valeriemettler/Blocitoff.git
+
+http://valblocitoff.herokuapp.com/ (demo version)
+https://github.com/valeriemettler/Blocitoff.git (source code)
 
 Made with my mentor, Chris Beck, at Bloc (http://bloc.io).
 
-Ruby version 2.0.0 
+Ruby version 2.0.0
 
-setup: 
+setup:
 config/application.yml
 config/application.example.yml
 
