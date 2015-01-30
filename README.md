@@ -3,7 +3,8 @@
 ## valblocitoff:  a self-destructing to-do list app
 
 
-http://valblocitoff.herokuapp.com/ (demo version)
+http://valblocitoff.herokuapp.com (demo version)
+
 https://github.com/valeriemettler/Blocitoff.git (source code)
 
 Made with my mentor, Chris Beck, at Bloc (http://bloc.io).
